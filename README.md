@@ -60,6 +60,8 @@ proxy.conf.js                backend proxy configuration
 
 # Project details
 
+<<<<<<< HEAD
+
 In this project i used bootstrap design for rapid prototypeing usualy i go angular material design. The folder structure is made out of shell and core.
 
 I'm seperating everything into the components for cleaner code and easier debuging. Models, Services, are also sepereated from everything
@@ -87,6 +89,38 @@ beacuse they refuse to speak english :)
 #Theme
 
 Since i didn't recive mockup i did default theme with custom variables
+
+=======
+
+In this project i used bootstrap design for rapid prototypeing usualy i go angular material design. The folder structure is made out of shell and core.
+
+I'm seperating everything into the components for cleaner code and easier debuging. Models, Services, are also sepereated from everything
+else as it is the best practice to keep them into their own space for later reuse.
+
+# Project routing
+
+Routing of the project is seperated in two groups, authorized routes and unotorized routes. I'm impleneting native angular guards
+with opetions to use Route and Route.withShell you cant enter the components unless you are authorized.
+#Http request
+
+Every http request is followed with Http interceptor. This is good practice for authorizations token, cacheing of services and intercepting bad request and unauthorized
+use of the applications wich produces 401 code.
+
+#Models
+Per best practices we are creating interfaces for each model
+
+#Services
+Services are seperated in this project for component for future reuse. Only one service is exception and that is authorization service which has its own folder (best practice)
+
+#Translation
+Since this is hotel api, i guess there is a need for translation service since not everyone is english speaking person. France is natural choice
+beacuse they refuse to speak english :)
+
+#Theme
+
+Since i didn't recive mockup i did default theme with custom variables
+
+> > > > > > > ea15246126d079c2a8a1de29e6bae6a2c78c4cf9
 
 ## Development server
 
