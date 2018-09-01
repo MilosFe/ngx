@@ -9,6 +9,14 @@
   During the project, I follow industry standards for developing Angular applications and best
   practices in this project are based on my expirience working with angular.
 
+  I scafolded project structure as show below and implemented routing
+
+  I created sign in page, with user stored in local storage (refresh wont sign user out) but invalid auth 401 will.
+  I would do same with bookmark and persiting data in the storage.
+
+  I created load hotels with spiner and basic bootstrap card, services are seperated. HTML and CSS is custom component.
+  I didn't have anymore time to implement all the rest.
+
 # Getting started
 
 1. Go to project folder and install dependencies:
