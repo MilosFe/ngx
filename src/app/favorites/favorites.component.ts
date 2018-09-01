@@ -4,15 +4,13 @@ import { environment } from '@env/environment';
 
 @Component({
   selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  templateUrl: './favorites.component.html',
+  styleUrls: ['./favorites.component.scss'],
 })
-export class AboutComponent implements OnInit {
-
+export class FavoritesComponent implements OnInit {
   version: string = environment.version;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() { }
-
+  ngOnInit() {}
 }

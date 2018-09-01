@@ -10,7 +10,7 @@ import { environment } from '@env/environment';
 import { CoreModule } from '@app/core';
 import { SharedModule } from '@app/shared';
 import { HomeModule } from './home/home.module';
-import { AboutModule } from './about/about.module';
+import { FavoritesModule } from './favorites/favorites.module';
 import { LoginModule } from './login/login.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -26,13 +26,12 @@ import { AppRoutingModule } from './app-routing.module';
     CoreModule,
     SharedModule,
     HomeModule,
-    AboutModule,
+    FavoritesModule,
     LoginModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   declarations: [AppComponent],
-  providers: [
-  ],
-  bootstrap: [AppComponent]
+  providers: [],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -2,17 +2,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { Route, extract } from '@app/core';
-import { AboutComponent } from './about.component';
-
+import { FavoritesComponent } from '@app/favorites/favorites.component';
 const routes: Routes = [
-  Route.withShell([
-    { path: 'about', component: AboutComponent, data: { title: extract('About') } }
-  ])
+  Route.withShell([{ path: 'favorites', component: FavoritesComponent, data: { title: extract('Favorites') } }]),
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
-  providers: []
+  providers: [],
 })
-export class AboutRoutingModule { }
+export class FavoritesRoutingModule {}

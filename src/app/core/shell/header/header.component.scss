@@ -1,7 +1,10 @@
-@import "src/theme/theme-variables";
+@import 'src/theme/theme-variables';
 
 .navbar {
   margin-bottom: $spacer;
+  .navbar-brand {
+    color: $white;
+  }
 }
 
 .nav-link.dropdown-toggle {

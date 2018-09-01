@@ -5,5 +5,38 @@
 q {
   font-style: italic;
   font-size: 1.2rem;
-  quotes: "« " " »";
+  quotes: '« ' ' »';
+}
+
+body {
+  background: #eee;
+}
+
+.container-fluid {
+  max-width: 1200px;
+}
+
+.card {
+  background: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  img {
+    width: 100%;
+  }
+}
+
+[class*='row'] {
+  margin-bottom: 1em;
+  justify-content: center;
+}
+
+[class*='col-'] {
+  background: #efefef;
+  border: 1px solid #ddd;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  width: 100%;
+}
+
+.btn .btn-primary {
+  margin: 0 AUTO;
 }

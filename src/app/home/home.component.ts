@@ -1,25 +1,39 @@
 import { Component, OnInit } from '@angular/core';
 import { finalize } from 'rxjs/operators';
-
-import { QuoteService } from './quote.service';
+import { HotelsService } from '@app/services/hotels/hotels.service';
+import { Hotels } from './../models/hotel.model';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-
   quote: string;
   isLoading: boolean;
+  hotels: Hotels;
 
-  constructor(private quoteService: QuoteService) { }
+  constructor(private hotelsService: HotelsService) {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  loadHotels() {
     this.isLoading = true;
-    this.quoteService.getRandomQuote({ category: 'dev' })
-      .pipe(finalize(() => { this.isLoading = false; }))
-      .subscribe((quote: string) => { this.quote = quote; });
+    this.hotelsService
+      .getHotels()
+      .pipe(
+        finalize(() => {
+          this.isLoading = false;
+        })
+      )
+      .subscribe(
+        (hotels: Hotels) => {
+          this.hotels = hotels;
+        },
+        error => {
+          // this would be custom logger sending server an error
+          console.log('Error', error);
+        }
+      );
   }
-
 }
